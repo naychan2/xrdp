@@ -163,7 +163,7 @@ if sys.platform.startswith("linux"):
 elif sys.platform.startswith("freebsd"):
     os.system('clear')
 
-ip = str("66.42.49.212")
+ip = str("8.12.16.78")
 port = int(80)
 method_attack = str("post")
 times = int(85000)
