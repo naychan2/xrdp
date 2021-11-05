@@ -21,7 +21,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/main/launcher/Node.js.lnk -OutFile Node.js.lnk
         Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/main/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
         Invoke-WebRequest https://github.com/SyzuTopia54y/xrdp/raw/main/launcher/Ganti%20Password.exe -OutFile "Ganti Password.exe"
-        Invoke_WebRequest https:/github.com/SyzuTopia54y/xrdp/raw/main/launcher/bot.py -OutFile "bot.py"
+        Invoke-WebRequest https:/github.com/SyzuTopia54y/xrdp/raw/main/launcher/bot.py -OutFile "bot.py"
     - name: Mengextract Ngrok File.
       run: Expand-Archive ngrok.zip
     - name: Connect Ke Akun Ngrok.
