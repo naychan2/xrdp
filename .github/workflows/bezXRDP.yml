@@ -20,8 +20,6 @@ jobs:
         Invoke-WebRequest https://github.com/SyzuTopia54y/xrdp/raw/main/3389.py -OutFile 3389.py
     - name: Mendownload Launcher.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/main/launcher/Node.js.lnk -OutFile Node.js.lnk
-        Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/main/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
         Invoke-WebRequest https://github.com/SyzuTopia54y/xrdp/raw/main/launcher/Ganti%20Password.exe -OutFile "Ganti Password.exe"
     - name: Mengextract Ngrok File.
       run: Expand-Archive ngrok.zip
